@@ -5,7 +5,7 @@ Here you will find collection of most and frequently used commands on linux. Tho
 ##Broadband and wifi setup
 	sudo pppoeconf 
 
-To enable wifi need to edit this file
+###To enable wifi need to edit this file
 	sudo gedit /etc/NetworkManager/system-connections/wifi-hostspot
 	(type = ap)
 
@@ -41,7 +41,7 @@ To enable wifi need to edit this file
 	or
 	service apache2 restart
 
-Need to edit bellow file
+###Need to edit bellow file
 	sudo gedit /etc/apache2/sites-available/000-default.conf
 
 	DocumentRoot /var/www/html
