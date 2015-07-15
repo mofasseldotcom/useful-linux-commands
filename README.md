@@ -95,7 +95,14 @@ Skype indicator to work properly:
 	sudo apt-get -f install && sudo apt-get autoremove &&
 	sudo apt-get -y autoclean && sudo apt-get -y clean
 
-##Simple Screen Recorder
+##To Solve microphone input issue
+	sudo gedit /etc/modprobe.d/alsa-base.conf
+	"options snd-hda-intel model=auto" // Put it bottom of the alsa-base.conf file
+	hdajackretask // select show unconnected pins and choose microphone from pin 18
+	alsamixer //adjust pcm and capture
+
+
+##To loopback microphone sound to speaker
 	pactl unload-module module-loopback
 	pactl load-module module-loopback
 
