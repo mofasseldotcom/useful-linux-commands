@@ -106,6 +106,8 @@ Skype indicator to work properly:
 	pactl unload-module module-loopback
 	pactl load-module module-loopback
 
+##Substitute of adboe flash plugin
+	sudo apt-get install lightspark browser-plugin-lightspark
 
 ##Linux obuntu installation in google chromebook
 
