@@ -36,10 +36,10 @@ Here you will find collection of most and frequently used commands on linux. Tho
 	sudo apt-get install phpmyadmin
 
 ##To enable rewrite mode on and Restart apache2
-	a2enmod rewrite
-	/etc/init.d/apache2 restart
+	sudo a2enmod rewrite
+	sudo /etc/init.d/apache2 restart
 	or
-	service apache2 restart
+	sudo service apache2 restart
 
 ###Need to edit bellow file
 	sudo gedit /etc/apache2/sites-available/000-default.conf
@@ -48,13 +48,17 @@ Here you will find collection of most and frequently used commands on linux. Tho
 	<Directory "/var/www/html">
 		AllowOverride All
 	</Directory>
+###To set private domain name instead of localhost
+	sudo gedit /etc/hosts
+	127.0.0.1 	localhost
+	127.0.0.1 	newname.tld // Copy above line and edit it as you want
 
 ##www and WordPress directory and files permision setup
 
 	sudo chown www-data:www-data /var/www -R // to change user and group ownership
 	sudo chmod 755 /var/www -R // To change user permission where r=7 w=7 e=5
-	sudo find /var/www . -type d -exec chmod 755 {} +
-	sudo find /var/www . -type f -exec chmod 644 {} +
+	sudo find /var/www . -type d -exec chmod 755 {} + // Directory specific permission change
+	sudo find /var/www . -type f -exec chmod 644 {} + // File specific permission change
 	sudo adduser username www-data // adds your username to www-data group
 	sudo usermod -a -G www-data username // adds your username to www-data group
 
