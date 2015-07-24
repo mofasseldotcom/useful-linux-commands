@@ -51,9 +51,12 @@ Here you will find collection of most and frequently used commands on linux. Tho
 
 ##www and WordPress directory and files permision setup
 
-	sudo chown -R www-data:www-data /var/www
+	sudo chown www-data:www-data /var/www -R // to change user and group ownership
+	sudo chmod 755 /var/www -R // To change user permission where r=7 w=7 e=5
 	sudo find /var/www . -type d -exec chmod 755 {} +
 	sudo find /var/www . -type f -exec chmod 644 {} +
+	sudo adduser username www-data // adds your username to www-data group
+	sudo usermod -a -G www-data username // adds your username to www-data group
 
 ##To install skype
 
