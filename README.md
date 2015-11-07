@@ -5,17 +5,18 @@ Here you will find collection of most and frequently used commands on linux. Tho
 ##Broadband and wifi setup
 	sudo pppoeconf 
 
-###To enable wifi need to edit this file
+###To enable wifi sharing:
 	Create a WiFi connection first
-	Connection name will be "wifi-hotspot" (or anything)
-	Set one SSID, in my case it is "webitbuzz"
-	WiFi Security >> Choose "WPA & WPA2 Personal" from Security dropdown
-	Set a Password, in my case "0123456789"
-	IPV4 Settings >> Shared to other computers and Save	
+	* Connection name will be "wifi-hotspot" (or anything)
+	* Set one SSID, in my case it is "webitbuzz"
+	* WiFi Security >> Choose "WPA & WPA2 Personal" from Security dropdown
+	* Set a Password, in my case "0123456789"
+	* IPV4 Settings >> Shared to other computers and Save	
 
 	Now you will see a file named wifi-hotspot in path bellow:
 
 	sudo gedit /etc/NetworkManager/system-connections/wifi-hotspot
+
 	Just change type=infrastructure to "type = ap" and save
 	Now you are ready to go.
 
