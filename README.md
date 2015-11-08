@@ -125,7 +125,8 @@ Skype indicator to work properly:
 	pactl load-module module-loopback
 
 
-### Way to generate SSH Key fo securing SSH Connection with cpanel
+### Way to generate SSH Key to make passwordless secure SSH Connection with cpanel
+
 	ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 	* Above command will ask you to set your passpress
