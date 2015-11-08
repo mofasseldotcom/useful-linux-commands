@@ -124,8 +124,25 @@ Skype indicator to work properly:
 	pactl unload-module module-loopback
 	pactl load-module module-loopback
 
-##Substitute of adboe flash plugin
-	sudo apt-get install lightspark browser-plugin-lightspark
+
+### Way to generate SSH Key fo securing SSH Connection with cpanel
+	ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+	* Above command will ask you to set your passpress
+
+	* You will see id_rsa & id_rsa.pub key is generated
+
+	* Upload id_rsa.pub key into cpanel .ssh folder using command bellow
+	
+	scp /home/localuser/.ssh/id_rsa.pub cpaneluser@domain.tld:/home/cpaneluser/.ssh/authorized_keys
+
+	* It will ask for cpanel password
+	* Above command will upload and authorize your id_rsa.pub key in order to work properly
+
+	* Now you can connect your cpanel server using command bellow
+
+	ssh cpaneluser@domain.tld // it will ask for passpress for onetime in each computer login session
+
 
 ##Linux obuntu installation in google chromebook
 
