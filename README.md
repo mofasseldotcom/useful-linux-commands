@@ -17,7 +17,7 @@ Here you will find collection of most and frequently used commands on linux. Tho
 
 	sudo gedit /etc/NetworkManager/system-connections/wifi-hotspot
 
-	Just change type=infrastructure to "type = ap" and save
+	Just change type=infrastructure to "mode = ap" and save
 	Now you are ready to go.
 
 ## To update, upgrade and dist upgrade
