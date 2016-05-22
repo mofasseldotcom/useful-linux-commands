@@ -45,6 +45,7 @@ Here you will find collection of most and frequently used commands on linux. Tho
 	sudo apt-get install tasksel
 	sudo tasksel
 	sudo apt-get install phpmyadmin
+	sudo apt-get install php-mbstring php7.0-mbstring php-gettext
 
 ##To enable rewrite mode on and Restart apache2
 	sudo a2enmod rewrite
