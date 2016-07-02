@@ -95,7 +95,7 @@ Step 2: Edit and replace bellow file
 		AllowOverride All
 	</Directory>
 
-	Step 3: Restart apache2
+Step 3: Restart apache2
 
 	sudo service apache2 restart
 
@@ -103,8 +103,8 @@ Extra step 4: To upload plugins or add media without facing issues edit and repl
 
 	sudo gedit /etc/apache2/envvars
 
-	export APACHE_RUN_USER=mofassel
-	export APACHE_RUN_GROUP=mofassel
+	export APACHE_RUN_USER=username
+	export APACHE_RUN_GROUP=username
 
 ##To install skype
 
