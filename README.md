@@ -74,19 +74,19 @@ Here you will find collection of most and frequently used commands on linux. Tho
 	sudo adduser username www-data // adds your username to www-data group
 	sudo usermod -a -G www-data username // adds your username to www-data group
 
-## Changing Server Document Root from /var/www to anywhere
+## Changing Server Document Root from /var/www to /home/username/Sites/public_html
 
-	Step 1: Edit and replace bellow file
+Step 1: Edit and replace bellow file
 
 	sudo gedit /etc/apache2/apache2.conf
 
 	<Directory /home/user/Sites/public_html/>
-	Options Indexes FollowSymLinks
-	AllowOverride None
-	Require all granted
+		Options Indexes FollowSymLinks
+		AllowOverride None
+		Require all granted
 	</Directory> 
 
-	Step 2: Edit and replace bellow file
+Step 2: Edit and replace bellow file
 
 	sudo gedit /etc/apache2/sites-available/000-default.conf
 
@@ -99,7 +99,9 @@ Here you will find collection of most and frequently used commands on linux. Tho
 
 	sudo service apache2 restart
 
-	Extra step 4: To upload plugins or add media without facing issues edit and replace bellow file
+Extra step 4: To upload plugins or add media without facing issues edit and replace bellow file
+
+	sudo gedit /etc/apache2/envvars
 
 	export APACHE_RUN_USER=mofassel
 	export APACHE_RUN_GROUP=mofassel
